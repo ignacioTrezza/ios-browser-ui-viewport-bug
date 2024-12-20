@@ -1,5 +1,5 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { AppModule } from './app/app.module';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
 
 // Adjust --vh custom property on window resize
 function setVh() {
@@ -13,5 +13,7 @@ setVh();
 // Update on resize
 window.addEventListener('resize', setVh);
 
-platformBrowserDynamic().bootstrapModule(AppModule)
+bootstrapApplication(AppComponent, {
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }]
+})
   .catch(err => console.error(err));
