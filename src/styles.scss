@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Global Styles and SCSS Mixins */
+
+/* Mixin for full viewport height */
+@mixin full-viewport {
+  height: 100vh;
+}
+
+/* Variable for viewport height adjustment */
+$vh-adjustment: calc(var(--vh, 1vh) * 100);
+
+/* Apply mixin to the full-viewport class */
+.full-viewport {
+  @include full-viewport;
+  height: $vh-adjustment;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5;
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
