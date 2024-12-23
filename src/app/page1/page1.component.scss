@@ -1,0 +1,38 @@
+.page1 {
+    height: calc(100vh - 6rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+
+// New styles for the scrollable container
+.scrollable-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 40vh;
+    overflow-y: auto;
+    border: 1px solid #ccc; // Optional: for visual separation
+    padding: 1rem; // Optional: for inner spacing
+}
+
+.scrollable-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.scrollable-container li {
+    margin-bottom: 0.5rem; // Optional: space between items
+}
+.button-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+}

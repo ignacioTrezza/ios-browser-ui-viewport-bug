@@ -20,7 +20,7 @@
             "outputPath": "dist/ios-browser-ui-viewport-bug",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "baseHref": "/ios-browser-ui-viewport-bug/",
+            "baseHref": "/",
             "polyfills": [
               "zone.js"
             ],

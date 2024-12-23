@@ -1,5 +1,17 @@
 <div class="full-viewport page1">
   <h1>Page 1</h1>
   <p>Another page utilizing 100vh to test viewport behavior.</p>
-  <p>Con la directiva dudosa aplicada</p>
+  <p>Caso de error Scroll Behaviour</p>
+
+  <input type="number" [(ngModel)]="itemCount" min="1" max="100">
+
+  <div class="scrollable-container">
+    <ul>
+      <li *ngFor="let item of getItems()">Item {{ item }}</li>
+    </ul>
+  </div>
+  <div class="button-container">
+    <button class="button" (click)="decrementCount()">-</button>
+    <button class="button" (click)="incrementCount()">+</button>
+  </div>
 </div>
