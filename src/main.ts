@@ -1,18 +1,18 @@
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
-// import { AppComponent } from './app/app.component';
+import { AppComponent } from './app/app.component';
 
 // Adjust --vh custom property on window resize
-// function setVh() {
-//   let vh = window.innerHeight * 0.01;
-//   document.documentElement.style.setProperty('--vh', `${vh}px`);
-// }
+function setVh() {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
 
 // Initial setting
-// setVh();
+setVh();
 
 // Update on resize
-// window.addEventListener('resize', setVh);
+window.addEventListener('resize', setVh);
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
