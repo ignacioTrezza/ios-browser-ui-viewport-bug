@@ -1,5 +1,6 @@
 .home {
-  height: calc(100vh - 6rem);
+  height: 100%;
+  max-height: calc(100vh - 6rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
