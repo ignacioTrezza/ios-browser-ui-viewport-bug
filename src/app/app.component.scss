@@ -1,10 +1,13 @@
 /* Existing styles */
-
+.content{
+  height: 100vh;
+}
 // Navigation Styles
 .navigation {
   display: flex;
   gap: 1rem;
-  margin: 1rem 0;
+  padding: 0.5rem 0;
+  height: 6rem;
 
   a {
     text-decoration: none;

@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
+    background-color: #f5f5f5;
   }
 
 // New styles for the scrollable container
@@ -14,6 +15,7 @@
     overflow-y: auto;
     border: 1px solid #ccc; // Optional: for visual separation
     padding: 1rem; // Optional: for inner spacing
+    width: 100%;
 }
 
 .scrollable-container ul {
