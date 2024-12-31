@@ -9,7 +9,7 @@
 }
 html,
 body {
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -27,18 +27,18 @@ body {
   }
 }
 /* Mixin for full viewport height */
-@mixin full-viewport {
-  height: 100vh;
-}
+// @mixin full-viewport {
+//   height: calc(var(--vh, 1vh) * 100);
+// }
 
 /* Variable for viewport height adjustment */
-$vh-adjustment: calc(var(--vh, 1vh) * 100);
+// $vh-adjustment: calc(var(--vh, 1vh) * 100);
 
 /* Apply mixin to the full-viewport class */
 .full-viewport {
-  @include full-viewport;
-  height: $vh-adjustment;
-
+  // @include full-viewport;
+  // height: $vh-adjustment;
+background-color: antiquewhite;
   // display: flex;
   // flex-direction: column;
   // align-items: center;

@@ -1,10 +1,39 @@
-<div class=" page2">
+<div class="full-viewport page2">
   <h1>Page 2</h1>
+  <div class="height-info">
+    <div class="height-box">
+      <label>Inner Heightt:</label>
+      <input type="text" [value]="innerHeight + 'px'" readonly>
+    </div>
+   
+  </div>
+  <div class="height-info">
+  <div class="height-box">
+    <label>Outer Height:</label>
+    <input type="text" [value]="outerHeight + 'px'" readonly>
+  </div>
+  </div>
+  <p>Another page utilizing 100vh to test viewport behavior.</p>
+  <p>Caso de error Scroll Behaviour</p>
+  <p>Scrollable content max-height</p>
+  <div class="height-info">
+    <div class="height-box">
+      <label>Inner Heightt:</label>
+      <input type="text" [value]="innerHeight + 'px'" readonly>
+    </div>
+   
+  </div>
+  <div class="height-info">
+  <div class="height-box">
+    <label>Outer Height:</label>
+    <input type="text" [value]="outerHeight + 'px'" readonly>
+  </div>
+  </div>
   <p>Another page utilizing 100vh to test viewport behavior.</p>
   <p>Caso de error Scroll Behaviour</p>
   <p>Scrollable content max-height</p>
 
-  <input type="number" [(ngModel)]="itemCountt" min="1" max="100">
+  <input type="number" [(ngModel)]="itemCount" min="1" max="100">
 
   <div class="scrollable-container">
     <ul>

@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 import { FormsModule } from '@angular/forms';
+import { ViewportDirectiveDirective } from './directive/viewport-directive.directive';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     Page1Component,
     Page2Component,
+    ViewportDirectiveDirective,
   ],
   imports: [
     BrowserModule,

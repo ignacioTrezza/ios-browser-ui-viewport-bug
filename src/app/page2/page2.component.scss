@@ -1,21 +1,21 @@
 .page2 {
-    height: calc(100vh - 6rem);
+    height: calc(var(--vh, 1vh) * 100 - 6rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 1rem;
-    background-color: #f5f5f5;
+    overflow-y: auto;
   }
 
 // New styles for the scrollable container
 .scrollable-container {
     display: flex;
     flex-direction: column;
-    max-height: 40vh;
+    max-height: calc(var(--vh, 1vh) * 60);
     overflow-y: auto;
     border: 1px solid #ccc; // Optional: for visual separation
     padding: 1rem; // Optional: for inner spacing
-    width: 100%;
+    height: 96vh;
 }
 
 .scrollable-container ul {
@@ -37,4 +37,33 @@
     font-size: 1rem;
     cursor: pointer;
     width: 100%;
+}
+
+// Add these new styles
+.height-info {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  height: 30vh;
+}
+
+.height-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+ 
+
+  input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: monospace;
+    width: 100px;
+    text-align: right;
+  }
+
+  label {
+    font-size: 0.9rem;
+    color: #666;
+  }
 }

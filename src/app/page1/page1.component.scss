@@ -1,5 +1,5 @@
 .page1 {
-    height: calc(100vh - 6rem);
+    height: calc(var(--vh, 1vh) * 100 - 6rem);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -11,7 +11,7 @@
 .scrollable-container {
     display: flex;
     flex-direction: column;
-    min-height: 40vh;
+    min-height: calc(var(--vh, 1vh) * 40);
     overflow-y: auto;
     border: 1px solid #ccc; // Optional: for visual separation
     padding: 1rem; // Optional: for inner spacing
