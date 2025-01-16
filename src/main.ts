@@ -9,10 +9,10 @@ function setVh() {
 }
 
 // Initial setting
-setVh();
+// setVh();
 
 // Update on resize
-window.addEventListener('resize', setVh);
+// window.addEventListener('resize', setVh);
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));

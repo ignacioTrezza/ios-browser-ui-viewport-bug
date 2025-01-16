@@ -1,13 +1,30 @@
+@use 'src/styles/layout/components/layout-vars' as vars;
+
 .home {
-  height: calc(var(--vh, 1vh) * 100 - 6rem);
-  // max-height: calc(var(--vh, 1vh) * 100 - 6rem);
+  // height: vars.$current-height;
+  height: calc(vars.$viewport-full-height - 6rem);
+  // max-height: calc(var(--vh, 1vh) * 77);
+  background-color: rgb(97, 160, 95);
+  
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  border: 1px solid #ee1313;
   // background-color: #f5f5f5;
+  .home-content{
+background-color: cadetblue;
+display: flex;
+flex-direction: column;
+height: inherit;
+justify-content: space-between;
+  }
 }
-
+h1{
+  margin-top:5px!important;
+}
 .button-group {
   display: flex;
   justify-content: space-around;
@@ -17,6 +34,7 @@ button {
   padding: 0.5rem 1rem;
   font-size: 1rem;
   cursor: pointer;
+  height: 3rem;
 }
 
 .lorem-ipsum-container {
@@ -27,5 +45,6 @@ button {
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
-  height: calc(var(--vh, 1vh) * 60);
+  height: calc(vars.$viewport-full-height );
+  max-height: calc(vars.$viewport-full-height * 0.26);
 }

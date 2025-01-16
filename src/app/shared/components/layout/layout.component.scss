@@ -1,0 +1,41 @@
+@use 'src/styles/layout/components/layout-vars' as vars;
+
+.layout {
+  display: flex;
+  flex-direction: column;
+    height: vars.$viewport-full-height;
+    box-sizing: border-box;
+    border: 1px solid #ee1313;
+}
+
+.navigation {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  height: 6rem;
+  border: 2px solid #6539dd;
+
+  a {
+    text-decoration: none;
+    color: #1976d2;
+    font-weight: bold;
+
+    &.active {
+      border-bottom: 2px solid #1976d2;
+    }
+
+    &:hover {
+      color: #125699;
+    }
+  }
+}
+
+.content {
+    display: block;
+  max-height: calc(vars.$viewport-full-height - 6rem);
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 2px solid #dd39cf;
+} 

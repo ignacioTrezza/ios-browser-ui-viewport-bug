@@ -1,5 +1,8 @@
 <div class="full-viewport page2">
   <h1>Page 2</h1>
+ <section class="page2-content">
+  <input type="number" [(ngModel)]="itemCount" min="1" max="100">
+
   <div class="height-info">
     <div class="height-box">
       <label>Inner Heightt:</label>
@@ -33,13 +36,13 @@
   <p>Caso de error Scroll Behaviour</p>
   <p>Scrollable content max-height</p>
 
-  <input type="number" [(ngModel)]="itemCount" min="1" max="100">
 
   <div class="scrollable-container">
     <ul>
       <li *ngFor="let item of getItems()">Item {{ item }}</li>
     </ul>
   </div>
+</section>
   <div class="button-container">
     <button class="button" (click)="decrementCount()">-</button>
     <button class="button" (click)="incrementCount()">+</button>

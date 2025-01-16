@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Global Styles and SCSS Mixins */
+
+@use 'src/styles/layout/components/layout-vars' as vars;
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +11,9 @@
 }
 html,
 body {
-  height: calc(var(--vh, 1vh) * 100);
+  height: vars.$viewport-full-height;
+  // height: calc(var(--vh, 1vh) * 100);
+  // height: 100svh;
   overflow: hidden;
   display: flex;
   flex-direction: column;

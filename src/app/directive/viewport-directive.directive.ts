@@ -1,4 +1,4 @@
-import { Directive, HostListener, OnInit, Renderer2 } from '@angular/core';
+import { Directive, HostListener, OnInit, Renderer2, ElementRef } from '@angular/core';
 
 @Directive({
   selector: '[appViewportDirective]'
@@ -6,7 +6,7 @@ import { Directive, HostListener, OnInit, Renderer2 } from '@angular/core';
 export class ViewportDirectiveDirective implements OnInit {
   private initialHeight: number = 0;
 
-  constructor(private renderer: Renderer2) {}
+  constructor(private renderer: Renderer2, private el: ElementRef) {}
 
   ngOnInit(): void {
     this.initialHeight = window.innerHeight;
@@ -40,7 +40,7 @@ export class ViewportDirectiveDirective implements OnInit {
   }
 
   private setViewportDimensions(): void {
-    const visualHeight = window.visualViewport?.height || window.innerHeight;
+    const visualHeight = window.visualViewport?.height || 0;
     const visualWidth = window.visualViewport?.width || window.innerWidth;
 
     const toolbarHeight = window.outerHeight - window.innerHeight;
@@ -48,11 +48,12 @@ export class ViewportDirectiveDirective implements OnInit {
 
     const finalHeight = adjustedHeight < this.initialHeight ? adjustedHeight : this.initialHeight;
 
-    const vh = finalHeight * 0.01;
+    const vh = visualHeight * 0.01;
     const vw = visualWidth * 0.01;
 
     this.renderer.setStyle(document.documentElement, '--vh', `${vh}px`);
     this.renderer.setStyle(document.documentElement, '--vw', `${vw}px`);
+
   }
 }
  
