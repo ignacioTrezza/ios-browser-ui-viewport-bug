@@ -40,7 +40,7 @@ export class ViewportDirectiveDirective implements OnInit {
   }
 
   private setViewportDimensions(): void {
-    const visualHeight = window.visualViewport?.height || 0;
+    const visualHeight = window.visualViewport?.height || window.innerHeight;
     const visualWidth = window.visualViewport?.width || window.innerWidth;
 
     const toolbarHeight = window.outerHeight - window.innerHeight;
@@ -55,5 +55,8 @@ export class ViewportDirectiveDirective implements OnInit {
     this.renderer.setStyle(document.documentElement, '--vw', `${vw}px`);
 
   }
+  // private isIOS(): boolean {
+  //   return /iPad|iPhone|iPod/.test(navigator.userAgent) && !(window as any).MSStream;
+  // }
 }
  
